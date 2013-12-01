@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   Hubot ca - get the top item on Bitcoin advice RSS
+#   hubot ca - get the latest bitcoin BUY/SELL advice
 #
 # Author:
 #   skimbrel, modified by willeponken for Bitcoin advice.

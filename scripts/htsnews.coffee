@@ -8,9 +8,9 @@
 #   None
 #
 # Commands:
-#   hubot hn top <N> - get the top N items on hts news
-#   hn.top - refer to the top item on hn
-#   hn[i] - refer to the ith item on hn
+#   hubot hn top <N> - get the top N items on HTS RSS
+#   hn.top - refer to the top item on HTS RSS
+#   hn[i] - refer to the ith item on HTS RSS
 #
 # Author:
 #   skimbrel, slightly modified by willeponken for HTS RSS.
