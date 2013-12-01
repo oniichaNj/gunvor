@@ -34,4 +34,4 @@ module.exports = (robot) ->
 
     emit = cmds.join "\n"
 
-    msg.reply emit
+    msg.reply {user: {name: user}} + emit
