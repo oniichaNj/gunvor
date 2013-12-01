@@ -81,3 +81,5 @@ module.exports = (robot) ->
 
     res.setHeader 'content-type', 'text/html'
     res.end helpContents robot.name, emit
+    user = response.message.user.name
+    robot.send({user: {name: user}}, emit)
