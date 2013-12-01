@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot ca - get the latest bitcoin BUY/SELL advice
+#   hubot ca - get the latest bitcoin BUY/SELL advice according to the EMA algorithm.
 #
 # Author:
 #   skimbrel, modified by willeponken for Bitcoin advice.
