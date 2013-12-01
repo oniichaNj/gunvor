@@ -34,6 +34,6 @@ module.exports = (robot) ->
 
     emit = cmds.join "\n"
 
-    helptexts = [emit]
-    msg.send user
-    msg.send({user: {name: user}}, helptext) for helptext in helptexts
+    greetings = [emit]
+
+    robot.send({user: {name: user}}, greeting) for greeting in greetings
