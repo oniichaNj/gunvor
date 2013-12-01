@@ -36,4 +36,5 @@ module.exports = (robot) ->
 
     greetings = [emit]
 
+    msg.send user + ": Please check your PM's for the help message."
     robot.send({user: {name: user}}, greeting) for greeting in greetings
