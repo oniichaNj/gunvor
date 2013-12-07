@@ -15,7 +15,7 @@ rules = [
 
 
 module.exports = (robot) ->
-  robot.respond /interject/i, (msg) ->
+  robot.hear /interject/i, (msg) ->
     text = msg.message.text
       msg.send rules.join('\n')
 
