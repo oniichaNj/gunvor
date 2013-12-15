@@ -24,14 +24,14 @@ module.exports = (robot) ->
   robot.respond /HN top (\d+)?/i, (msg) ->
     msg.http(hnFeedUrl).get() (err, res, body) ->
       if res.statusCode is not 200
-        msg.send "Something's gone awry"
+        msg.send c.rainbow("Something's gone awry")
       else
         feed = new NodePie(body)
         try
           feed.init()
           count = msg.match[1] || 5
           items = feed.getItems(0, count)
-          msg.send "(" + c.red(item.getDate()) + ") " + c.blue(item.getTitle()) + ": " + item.getDescription for item in items
+          msg.send "(" + c.red(item.getDate()) + ") " + c.cyan(item.getTitle()) for item in items
         catch e
           console.log(e)
           msg.send c.rainbow("Something's gone awry")
@@ -39,14 +39,14 @@ module.exports = (robot) ->
   robot.hear /HN(\.top|\[\d+\])/i, (msg) ->
      msg.http(hnFeedUrl).get() (err, res, body) ->
        if res.statusCode is not 200
-         msg.send "Something's gone awry"
+         msg.send c.rainbow("Something's gone awry")
        else
          feed = new NodePie(body)
          try
            feed.init()
          catch e
            console.log(e)
-           msg.send "Something's gone awry"
+           msg.send c.rainbow("Something's gone awry")
          element = msg.match[1]
          if element == "HN.top"
            idx = 0
@@ -54,7 +54,7 @@ module.exports = (robot) ->
            idx = (Number) msg.match[0].replace(/[^0-9]/g, '')
          try
            item = feed.getItems()[idx]
-           msg.send "(" + c.red(item.getDate()) + ") " + c.blue(item.getTitle()) + ": " + item.getDescription
+           msg.send "(" + c.red(item.getDate()) + ") " + c.cyan(item.getTitle())
          catch e
            console.log(e)
-           msg.send "Something's gone awry"
+           msg.send c.rainbow("Something's gone awry")
