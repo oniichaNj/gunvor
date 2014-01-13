@@ -1,7 +1,7 @@
-c = require('irc.colors')
+c = require('irc-colors')
 
 module.exports = (robot) ->
-  robot.hear /cake\??/i (msg) ->
+  robot.hear /cake\??/i, (msg) ->
     msg.send c.red("THE CAKE IS A LIE!")
-  robot.hear /nano\??/i (msg) ->
+  robot.hear /nano\??/i, (msg) ->
     msg.send "Death 2 nano!"
