@@ -7,13 +7,10 @@
 # Notes:
 #   swear words make anna cry
 
-rules = [
-    "Oh no you didn't!"
-  ]
-
+string = "Oh no you didn't!"
 
 module.exports = (robot) ->
   robot.hear /\b(fuck|fan|helvete)\b/i, (msg) ->
     text = msg.message.text
-    msg.send rules.join('\n')
+    msg.send string
 
